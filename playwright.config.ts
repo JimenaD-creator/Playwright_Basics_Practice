@@ -37,14 +37,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: {
-        headless: false,  // Set to false to see browser window
-        // OR use this for more options
-        launchOptions: {
-          headless: false,
-          slowMo: 500,  // Slows down actions by 500ms to see what's happening
-        }
-      }
+      use: { ...devices['Desktop Chrome'] },
     },
 
     {

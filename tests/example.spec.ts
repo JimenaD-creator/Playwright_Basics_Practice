@@ -13,7 +13,7 @@ test.describe('Playwright Basics', () => {
   })
 
   test('Should display context length', async({}) => {
-    const browser = await firefox.launch({});
+    const browser = await firefox.launch();
     const context = await browser.newContext()
     console.log(`Browser context length: ${browser.contexts().length}`);
     const page = await context.newPage();
